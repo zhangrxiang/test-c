@@ -6,20 +6,17 @@
 #include <stdio.h>
 #include "main.h"
 
-
-int main(void)
+void one()
 {
-    printf("string......................................\n");
-
     /**
-     * memchr()
-     *
-     * C 库函数 void *memchr(const void *str, int c, size_t n)
-     * 在参数 str 所指向的字符串的前 n 个字节中搜索第一次出现字符 c（一个无符号字符）的位置。
-     * str -- 指向要执行搜索的内存块。
-     * c -- 以 int 形式传递的值，但是函数在每次字节搜索时是使用该值的无符号字符形式。
-     * n -- 要被分析的字节数。
-     */
+        * memchr()
+        *
+        * C 库函数 void *memchr(const void *str, int c, size_t n)
+        * 在参数 str 所指向的字符串的前 n 个字节中搜索第一次出现字符 c（一个无符号字符）的位置。
+        * str -- 指向要执行搜索的内存块。
+        * c -- 以 int 形式传递的值，但是函数在每次字节搜索时是使用该值的无符号字符形式。
+        * n -- 要被分析的字节数。
+        */
 
     char *string = "abcdefg";
     size_t length = strlen(string);
@@ -101,4 +98,37 @@ int main(void)
 //    while (*p2 == '\0'){
 //        printf("%c\n",*p2++);
 //    }
+}
+void two()
+{
+    printf("two------------------------------------------\n");
+
+    /**
+     * C 库函数 void *memset(void *str, int c, size_t n) 复制字符 c（一个无符号字符）到参数 str 所指向的字符串的前 n 个字符。
+     *
+     * void *memset(void *str, int c, size_t n)
+     *
+     * 该值返回一个指向存储区 str 的指针。
+     */
+
+    char str[50];
+    strcpy(str,"This is string.h library function");
+    puts(str);
+
+    memset(str,'$',7);
+    puts(str);
+    printf("%s\n",str);
+
+    const char *str2 ="hello world";
+    puts(str2);
+    memset(str,'!',2);
+    puts(str2);
+
+}
+int main(void)
+{
+//    one();
+    printf("string......................................\n");
+    two();
+
 }
