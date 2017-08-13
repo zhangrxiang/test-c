@@ -124,6 +124,25 @@ void two()
     memset(str,'!',2);
     puts(str2);
 
+
+    /**
+     * C 库函数 char *strcat(char *dest, const char *src) 把 src 所指向的字符串追加到 dest 所指向的字符串的结尾。
+     * char *strcat(char *dest, const char *src)
+     * 该函数返回一个指向最终的目标字符串 dest 的指针。
+     */
+
+    char src[50], dest[50];
+
+    strcpy(src,  "This is source");
+    printf("length: %d\n", (int) strlen(src));
+    strcpy(dest, "This is destination");
+    printf("length: %d\n", (int) strlen(dest));
+    strcat(dest, src);
+
+    printf("最终的目标字符串： |%s|\n", dest);
+    printf("length: %d\n", (int) strlen(dest));
+
+
 }
 int main(void)
 {
