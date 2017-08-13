@@ -112,16 +112,16 @@ void two()
      */
 
     char str[50];
-    strcpy(str,"This is string.h library function");
+    strcpy(str, "This is string.h library function");
     puts(str);
 
-    memset(str,'$',7);
+    memset(str, '$', 7);
     puts(str);
-    printf("%s\n",str);
+    printf("%s\n", str);
 
-    const char *str2 ="hello world";
+    const char *str2 = "hello world";
     puts(str2);
-    memset(str,'!',2);
+    memset(str, '!', 2);
     puts(str2);
 
 
@@ -132,8 +132,8 @@ void two()
      */
 
     char src[50], dest[50];
-
-    strcpy(src,  "This is source");
+    char *pSrc = src, *pDesc = dest;
+    strcpy(src, "This is source");
     printf("length: %d\n", (int) strlen(src));
     strcpy(dest, "This is destination");
     printf("length: %d\n", (int) strlen(dest));
@@ -141,7 +141,21 @@ void two()
 
     printf("最终的目标字符串： |%s|\n", dest);
     printf("length: %d\n", (int) strlen(dest));
+    printf("src --> %s, length --> %d\n", pSrc, (int) strlen(pSrc));
+    printf("desc --> %s,length --> %d\n", pDesc, (int) strlen(pDesc));
+    printf("%d\n", (int) sizeof(src));
 
+
+    /**
+     * C 库函数 char *strncat(char *dest, const char *src, size_t n)
+     * 把 src 所指向的字符串追加到 dest 所指向的字符串的结尾，直到 n 字符长度为止。
+     * char *strncat(char *dest, const char *src, size_t n)
+     *
+     * 该函数返回一个指向最终的目标字符串 dest 的指针。
+     */
+
+    strncat(dest, src, 3);
+    printf("最终的目标字符串： |%s|\n", dest);
 
 }
 int main(void)
