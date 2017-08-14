@@ -23,8 +23,8 @@ void one()
     printf("strlen --> %d\n", (int) length);
     char *m = memchr(string, 'b', strlen(string));
     printf("memchr -->  %s\n", m);
-
-    for (int i = 0; i < strlen(string); ++i) {
+    int i;
+    for (i = 0; i < strlen(string); ++i) {
         char *c = (string + sizeof(char) * i);
         printf("%c  after is ------> %s\n", *c, (char *) memchr(string, *c, (size_t) strlen(string)));
     }
@@ -74,8 +74,8 @@ void one()
     char *p = memmove(dest, src, strlen(src));
     printf("After memmove dest = %s, src = %s\n", dest, src);
     printf("After memmove dest = %s, src = %s\n", p, src);
-
-    for (int j = 0; j < strlen(p); ++j) {
+	int j;
+    for (j = 0; j < strlen(p); ++j) {
         printf("%c\n", p[j]);
     }
 
