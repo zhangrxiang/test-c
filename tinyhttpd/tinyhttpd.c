@@ -32,7 +32,7 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <strings.h>
-//#include <strings.h>
+#include <string.h>
 #include <sys/stat.h>
 //#include <pthread.h>
 #include <sys/wait.h>
