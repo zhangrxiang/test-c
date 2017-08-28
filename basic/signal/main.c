@@ -46,7 +46,10 @@ void sig()
 int main()
 {
 
-//    rl_readline_name = "";
-    readline("");
+//    sig();
+
+
+
+
     return 1;
 }
