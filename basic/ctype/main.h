@@ -9,7 +9,7 @@
 
 int isalnumdemo();
 int isalphademo();
-
+int iscntrldemo();
 
 
 

@@ -5,5 +5,6 @@
 #include "main.h"
 int main()
 {
-    isalphademo();
+//    isalphademo();
+    iscntrldemo();
 }
