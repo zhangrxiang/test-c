@@ -8,5 +8,6 @@ set(SOURCE_FILES
         isalpha.c
         isalnum.c
         iscntrl.c
+        isdigit.c
         )
 add_executable(ctype ${SOURCE_FILES})

@@ -6,5 +6,6 @@
 int main()
 {
 //    isalphademo();
-    iscntrldemo();
+//    iscntrldemo();
+    isdigitdemo();
 }

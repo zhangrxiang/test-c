@@ -10,6 +10,7 @@
 int isalnumdemo();
 int isalphademo();
 int iscntrldemo();
+int isdigitdemo();
 
 
 
